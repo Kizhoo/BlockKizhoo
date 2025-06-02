@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Kizho- Game Puzzle Menarik</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/game.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Menu -->
+        <div id="main-menu" class="screen">
+            <h1>BLOCK KIZHO</h1>
+            <div class="menu-buttons">
+                <button id="start-btn">MULAI PERMAINAN</button>
+                <button id="how-to-play-btn">CARA BERMAIN</button>
+                <button id="leaderboard-btn">LEADERBOARD</button>
+            </div>
+        </div>
+
+        <!-- How to Play Screen -->
+        <div id="how-to-play" class="screen hidden">
+            <h2>Cara Bermain</h2>
+            <div class="instructions">
+                <p>1. Klik pada blok yang memiliki 2 atau lebih blok dengan warna yang sama yang saling terhubung.</p>
+                <p>2. Semakin banyak blok yang dihancurkan dalam satu klik, semakin tinggi poin yang didapat.</p>
+                <p>3. Blok di atas blok yang hancur akan jatuh ke bawah.</p>
+                <p>4. Permainan berakhir ketika tidak ada lagi blok yang bisa dihancurkan.</p>
+            </div>
+            <button id="how-to-play-back-btn">Kembali</button>
+        </div>
+
+        <!-- Leaderboard Screen -->
+        <div id="leaderboard" class="screen hidden">
+            <h2>Leaderboard</h2>
+            <div id="leaderboard-list">
+                <!-- Leaderboard akan diisi oleh JavaScript -->
+            </div>
+            <button id="back-btn">Kembali</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen hidden">
+            <div class="game-header">
+                <div class="score-display">
+                    <div>Skor: <span id="score">0</span></div>
+                    <div>Waktu: <span id="timer">60</span>s</div>
+                </div>
+                <button id="pause-btn">Jeda</button>
+            </div>
+            <div class="board" id="game-board">
+                <!-- Game board akan diisi oleh JavaScript -->
+            </div>
+        </div>
+
+        <!-- Pause Menu -->
+        <div id="pause-menu" class="overlay hidden">
+            <div class="pause-menu">
+                <h2>Permainan Dijeda</h2>
+                <button id="resume-btn">Lanjutkan</button>
+                <button id="restart-btn">Ulangi</button>
+                <button id="menu-btn">Menu Utama</button>
+            </div>
+        </div>
+
+        <!-- Game Over Menu -->
+        <div id="game-over" class="overlay hidden">
+            <div class="game-over-container">
+                <h2>Permainan Berakhir!</h2>
+                <p>Skor Akhir: <span id="final-score">0</span></p>
+                <input type="text" id="player-name" placeholder="Masukkan nama Anda" maxlength="15">
+                <button id="save-score-btn">Simpan Skor</button>
+                <button id="play-again-btn">Main Lagi</button>
+                <button id="game-over-menu-btn">Menu Utama</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/game.js"></script>
+    <script src="scripts/leaderboard.js"></script>
+</body>
+</html>
